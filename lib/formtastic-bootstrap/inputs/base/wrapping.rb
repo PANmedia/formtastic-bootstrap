@@ -19,7 +19,7 @@ module FormtasticBootstrap
           form_group_wrapping do
             label_html <<
             if prepended_or_appended?(options)
-              template.content_tag(:div, :class => add_on_wrapper_classes(options).join(" ")) do
+              template.content_tag(:div, :class => "input-group") do
                 input_content
               end
             else
@@ -34,7 +34,7 @@ module FormtasticBootstrap
 
         def add_on_content(content)
           return nil unless content
-          template.content_tag(:span, content, :class => 'add-on')
+          template.content_tag(:span, content, :class => 'input-group-addon')
         end
 
         def form_group_wrapping(&block)
